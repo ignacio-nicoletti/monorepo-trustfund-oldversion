@@ -1,0 +1,39 @@
+{
+  "name": "monorepo-trust",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "crm:start": "turbo run crm:start",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "db:generate": "turbo run db:generate",
+    "db:migrate": "turbo run db:migrate",
+    "db:pull": "turbo run db:pull",
+    "db:studio": "turbo run db:studio",
+    "db:adapter": "turbo run db:adapter",
+    "ui:add": "pnpm --filter @repo/ui ui:add",
+    "db:seed": "turbo run db:seed",
+    "db:check": "turbo run db:check",
+    "db:backup": "turbo run db:backup",
+    "db:push": "turbo run db:push",
+    "db:reset:hard": "turbo run db:reset:hard"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/ui": "workspace:*",
+    "@repo/database": "workspace:*",
+    "prettier": "^3.3.3",
+    "turbo": "^2.1.3",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@9.7.1",
+  "engines": {
+    "node": ">=18"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

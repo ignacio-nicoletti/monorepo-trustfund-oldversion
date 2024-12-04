@@ -1,0 +1,36 @@
+{
+  "name": "@repo/database",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    "./db": "./src/index.ts",
+    "./schema": "./src/index.ts",
+    "./types": "./src/schemas/types.ts"
+  },
+  "scripts": {
+    "db:generate": "drizzle-kit generate",
+    "db:check": "drizzle-kit check",
+    "db:migrate": "drizzle-kit migrate",
+    "db:pull": "drizzle-kit pull",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio --port 4321",
+    "db:adapter": "tsx ./src/adapter/adapter.ts",
+    "db:seed": "tsx ./src/scripts/seed.ts",
+    "db:backup": "tsx ./src/scripts/backup.ts",
+    "db:reset:hard": "tsx ./src/scripts/resetSchemas.ts"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^20",
+    "@types/pg": "^8.11.6",
+    "drizzle-kit": "^0.26.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.17.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.35.3",
+    "pg": "^8.12.0"
+  }
+}

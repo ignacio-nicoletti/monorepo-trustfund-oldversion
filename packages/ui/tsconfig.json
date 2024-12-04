@@ -1,0 +1,27 @@
+{
+    "extends": "@repo/typescript-config/react-library.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@repo/ui/*": [
+                "./@/*"
+            ],
+            "~/*": [
+                "./*"
+            ],
+            "@assets/*": [
+                "./assets/*"
+            ],
+            "@assets/icons/*": [
+                "./assets/icons/*"
+            ]
+        }
+    },
+    "include": [
+        "./@/",
+        "./@/components/",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

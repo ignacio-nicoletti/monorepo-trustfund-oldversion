@@ -1,0 +1,44 @@
+{
+  "extends": "@repo/typescript-config/nextjs.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@actions/*": [
+        "./src/server-actions/*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "next.config.mjs",
+    "postcss.config.mjs",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "types/next-auth.d.ts",
+    "src/utils/encriptarContras.js",
+    "../../packages/transactional/emails/MyEmail.tsx",
+    "src/utils/OTP/nodemailer.config.ts",
+  
+    
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

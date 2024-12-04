@@ -1,0 +1,68 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "env": [
+        "NEXT_PUBLIC_DATABASE_URL",
+        "BCRYPT_SALT_ROUNDS",
+        "PRIVATE_KEY",
+        "CLIENT_EMAIL",
+        "NODEMAILER_USER",
+        "NODEMAILER_PASS"
+      ],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "interactive": true
+    },
+    "crm:start": {
+      "cache": false,
+      "interactive": true
+    },
+    "ui:add": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:generate": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:migrate": {
+      "cache": false
+    },
+    "db:pull": {
+      "cache": false
+    },
+    "db:studio": {
+      "cache": false
+    },
+    "db:adapter": {
+      "cache": false
+    },
+    "db:seed": {
+      "cache": false
+    },
+    "db:check": {
+      "cache": false
+    },
+    "db:backup": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false,
+      "interactive": true
+    },
+    "db:reset:hard": {
+      "cache": false,
+      "interactive": true
+    }
+  }
+}

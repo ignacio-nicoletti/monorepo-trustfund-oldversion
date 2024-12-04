@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --mainbg: 210 100% 29%;
+    --darktxt: 213 10% 18%;
+    --secondary-web: 189 100% 37%;
+    --tertiary-web: 85 79% 56%;
+    --maincolor: 202 100% 36%;
+    --darkblue: 209 59% 16%;
+    --smoked: 210 20% 98%;
+    --icons: 85 79% 56%;
+    /* colores sidebar */
+    --sidebar-background: 208 72% 39%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* colores sidebar */
+
+    --background: 0 0% 100%;
+    /* Fondo global de la pantalla */
+    --foreground: 227 100% 8%;
+    /* Texto global de la pantalla */
+    --card: 0 0% 100%;
+    /* fondo de las cards */
+    --card-foreground: 222.2 84% 4.9%;
+    /* texto de las cards */
+    --popover: 0 0% 100%;
+    /* fondo de los mensajes flotantes  */
+    --popover-foreground: 222.2 84% 4.9%;
+    /* texto de los mensajes flotantes */
+    --primary: 208 72% 39%;
+    /* fondo botones primario */
+    --primary-foreground: 44 0% 100%;
+    /* texto botones primario */
+    --secondary: 210 40% 96.1%;
+    /* fondo botones secundario */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* texto botones secundario */
+    --muted: 210 40% 96.1%;
+    /* fondo de los skeletons y ui de carga */
+    --muted-foreground: 44 0% 100%;
+    /* texto de los skeletons y ui de carga */
+    --accent: 44 0% 100%;
+    /* fondo de acciones como hover, click, etc */
+    --accent-foreground: 227 54% 28%;
+    /* texto de acciones como hover, click, etc */
+    --destructive: 0 84.2% 60.2%;
+    /* fondo de componentes o acciones destructivas */
+    --destructive-foreground: 210 40% 98%;
+    /* texto de componentes o acciones destructivas */
+    --success: 165 73.6% 51%;
+    /* fondo más oscuro para componentes de éxito */
+    --success-foreground: 165 40% 95%;
+    /* texto de componentes o acciones de éxito */
+    --border: 227 100% 8%;
+    /* borde general de todo lo que tenga borde definido */
+    --input: 240 60% 98%;
+    /* Borde de los campos de formularios: input, select, textarea, etc. */
+    --input-border: 245 61% 92%;
+    /* Borde de los campos de formularios: input, select, textarea, etc. */
+    --ring: 222.2 84% 4.9%;
+    /* Color del anillo que se forma al elegir algo: inputs, selects, botones, etc. */
+    --radius: 0.5rem;
+    /* El radio de los bordes de todo, botones, cards, etc. */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --mainbg: 210 100% 29%;
+    --darktxt: 213 10% 18%;
+    --secondary-web: 189 100% 37%;
+    --tertiary-web: 85 79% 56%;
+    --darkblue: 209 59% 16%;
+    --maincolor: 202 100% 36%;
+    --smoked: 210 20% 98%;
+    --icons: 85 79% 56%;
+    /* colores sidebar */
+    --sidebar-background: 0 75% 47%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* colores sidebar */
+
+    --background: 0 0% 100%;
+    /* Fondo global de la pantalla */
+    --foreground: 227 100% 8%;
+    /* Texto global de la pantalla */
+    --card: 0 0% 100%;
+    /* fondo de las cards */
+    --card-foreground: 222.2 84% 4.9%;
+    /* texto de las cards */
+    --popover: 0 0% 100%;
+    /* fondo de los mensajes flotantes  */
+    --popover-foreground: 222.2 84% 4.9%;
+    /* texto de los mensajes flotantes */
+    --primary: 0 75% 47%;
+    --primary-foreground: 44 0% 100%;
+    --secondary: 210 40% 96.1%;
+    /* fondo botones secundario */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* texto botones secundario */
+    --muted: 210 40% 96.1%;
+    /* fondo de los skeletons y ui de carga */
+    --muted-foreground: 44 0% 100%;
+    /* texto de los skeletons y ui de carga */
+    --accent: 44 0% 100%;
+    /* fondo de acciones como hover, click, etc */
+    --accent-foreground: 227 54% 28%;
+    /* texto de acciones como hover, click, etc */
+    --destructive: 0 84.2% 60.2%;
+    /* fondo de componentes o acciones destructivas */
+    --destructive-foreground: 210 40% 98%;
+    /* texto de componentes o acciones destructivas */
+    --success: 165 73.6% 51%;
+    /* fondo más oscuro para componentes de éxito */
+    --success-foreground: 165 40% 95%;
+    /* texto de componentes o acciones de éxito */
+    --border: 227 100% 8%;
+    /* borde general de todo lo que tenga borde definido */
+    --input: 240 60% 98%;
+    /* Borde de los campos de formularios: input, select, textarea, etc. */
+    --input-border: 245 61% 92%;
+    /* Borde de los campos de formularios: input, select, textarea, etc. */
+    --ring: 222.2 84% 4.9%;
+    /* Color del anillo que se forma al elegir algo: inputs, selects, botones, etc. */
+    --radius: 0.5rem;
+    /* El radio de los bordes de todo, botones, cards, etc. */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-fixed-cover {
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  /* Nueva utilidad para usar maincolor */
+  .text-maincolor {
+    color: hsl(var(--maincolor));
+  }
+
+  /* Nueva utilidad para usar text-smoked */
+  .text-icons {
+    color: hsl(var(--icons));
+  }
+
+  .text-smoked {
+    color: hsl(var(--smoked));
+  }
+
+  .border-maincolor {
+    border-color: hsl(var(--maincolor));
+  }
+
+  .bg-maincolor {
+    background-color: hsl(var(--maincolor));
+  }
+
+  .bg-mainbg {
+    background-color: hsl(var(--mainbg));
+  }
+  .bg-darkblue {
+    background-color: hsl(var(--darkblue));
+  }
+  .bg-secondary-web {
+    background-color: hsl(var(--secondary-web));
+  }
+}
